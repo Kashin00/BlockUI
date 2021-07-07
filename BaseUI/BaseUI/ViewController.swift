@@ -48,7 +48,6 @@ class ViewController: UIViewController {
     @IBAction func rgbSliders(_ sender: Any) {
         changeColor()
     }
-    
 }
 
 extension ViewController: UITextFieldDelegate {
