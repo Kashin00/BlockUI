@@ -9,31 +9,24 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var avatarImageView: UIImageView!
+    @IBOutlet weak private var avatarImageView: UIImageView!
     
-    @IBOutlet weak var genderTextField: UITextField!
+    @IBOutlet weak private var genderTextField: UITextField!
     
-    @IBOutlet weak var dateTextField: UITextField!
+    @IBOutlet weak private var dateTextField: UITextField!
     
-    let gender = ["Male", "Female", "Unknown"]
+    private let gender = ["Male", "Female", "Unknown"]
     
-    var pickerView = UIPickerView()
-    var datePicker = UIDatePicker()
+    private var pickerView = UIPickerView()
+    private var datePicker = UIDatePicker()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        pickerView.dataSource = self
-        pickerView.delegate = self
-            
-        genderTextField.inputView = pickerView
-        avatarImageView.layer.cornerRadius = avatarImageView.frame.size.width / 2
-        avatarImageView.contentMode = .scaleAspectFit
         
-        createDatePicker()
+        setupUI()
     }
     
-    func createDatePicker() {
+    private func createDatePicker() {
         
         let toolBar = UIToolbar()
         toolBar.sizeToFit()
@@ -46,7 +39,7 @@ class ViewController: UIViewController {
         datePicker.datePickerMode = .date
     }
     
-    @objc func doneButtonSelector() {
+    @objc private func doneButtonSelector() {
         
         let format = DateFormatter()
         format.dateStyle = .medium
@@ -55,10 +48,10 @@ class ViewController: UIViewController {
         dateTextField.text = format.string(from: datePicker.date)
         view.endEditing(true)
     }
-    
 }
 
 extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -74,9 +67,25 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
 
-        
         genderTextField.text = gender[row]
         genderTextField.resignFirstResponder()
     }
     
+}
+
+
+
+private extension ViewController {
+    
+     func setupUI() {
+        
+        pickerView.dataSource = self
+        pickerView.delegate = self
+            
+        genderTextField.inputView = pickerView
+        avatarImageView.layer.cornerRadius = avatarImageView.frame.size.width / 2
+        avatarImageView.contentMode = .scaleAspectFit
+        
+        createDatePicker()
+    }
 }
