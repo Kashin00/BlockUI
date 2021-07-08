@@ -50,6 +50,9 @@ class ViewController: UIViewController {
         tapGestureRecognizer.addTarget(self, action: #selector(handleTapGesture(_:)))
         panGestureRecognizer.addTarget(self, action: #selector(handlePanGesture(_:)))
         panGestureRecognizer.maximumNumberOfTouches = 1
+        
+        rotationGestureRecognizer.delegate = self
+        pinchGestureRecognizer.delegate = self
     }
     
     
@@ -112,5 +115,13 @@ class ViewController: UIViewController {
         default:
                 break
         }
+    }
+}
+
+extension ViewController: UIGestureRecognizerDelegate {
+    
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer,
+                           shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
     }
 }
