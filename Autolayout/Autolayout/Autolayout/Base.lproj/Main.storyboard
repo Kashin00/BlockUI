@@ -15,56 +15,8 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4nj-7o-9Ji">
-                                <rect key="frame" x="20" y="39" width="374" height="784"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JEc-Bn-ZEY">
-                                        <rect key="frame" x="20" y="39" width="334" height="706"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HGf-Cd-DTY">
-                                                <rect key="frame" x="20" y="39" width="294" height="628"/>
-                                                <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7rR-vb-RQB">
-                                                        <rect key="frame" x="20" y="39" width="254" height="550"/>
-                                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
-                                                    </view>
-                                                </subviews>
-                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                                <constraints>
-                                                    <constraint firstItem="7rR-vb-RQB" firstAttribute="top" secondItem="HGf-Cd-DTY" secondAttribute="top" constant="39" id="4Jd-OU-R6K"/>
-                                                    <constraint firstAttribute="trailing" secondItem="7rR-vb-RQB" secondAttribute="trailing" constant="20" id="SKm-4V-OiL"/>
-                                                    <constraint firstAttribute="bottom" secondItem="7rR-vb-RQB" secondAttribute="bottom" constant="39" id="hGx-Xj-lCt"/>
-                                                    <constraint firstItem="7rR-vb-RQB" firstAttribute="leading" secondItem="HGf-Cd-DTY" secondAttribute="leading" constant="20" id="pby-nJ-OgD"/>
-                                                </constraints>
-                                            </view>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="linkColor"/>
-                                        <constraints>
-                                            <constraint firstItem="HGf-Cd-DTY" firstAttribute="top" secondItem="JEc-Bn-ZEY" secondAttribute="top" constant="39" id="16d-Sw-qkr"/>
-                                            <constraint firstAttribute="trailing" secondItem="HGf-Cd-DTY" secondAttribute="trailing" constant="20" id="Eqe-DZ-osb"/>
-                                            <constraint firstAttribute="bottom" secondItem="HGf-Cd-DTY" secondAttribute="bottom" constant="39" id="pKQ-am-fbn"/>
-                                            <constraint firstItem="HGf-Cd-DTY" firstAttribute="leading" secondItem="JEc-Bn-ZEY" secondAttribute="leading" constant="20" id="sVG-mq-uEb"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemPinkColor"/>
-                                <constraints>
-                                    <constraint firstItem="JEc-Bn-ZEY" firstAttribute="leading" secondItem="4nj-7o-9Ji" secondAttribute="leading" constant="20" id="9tz-xm-55g"/>
-                                    <constraint firstAttribute="trailing" secondItem="JEc-Bn-ZEY" secondAttribute="trailing" constant="20" id="Two-Dx-M5V"/>
-                                    <constraint firstItem="JEc-Bn-ZEY" firstAttribute="top" secondItem="4nj-7o-9Ji" secondAttribute="top" constant="39" id="hOr-62-oXB"/>
-                                    <constraint firstAttribute="bottom" secondItem="JEc-Bn-ZEY" secondAttribute="bottom" constant="39" id="y9F-Qk-CfJ"/>
-                                </constraints>
-                            </view>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4nj-7o-9Ji" secondAttribute="trailing" constant="20" id="Klc-Az-dAh"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4nj-7o-9Ji" secondAttribute="bottom" constant="39" id="XKV-HG-lSa"/>
-                            <constraint firstItem="4nj-7o-9Ji" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="sDk-0f-q2R"/>
-                            <constraint firstItem="4nj-7o-9Ji" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="39" id="zcs-fj-N0h"/>
-                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -73,20 +25,8 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
